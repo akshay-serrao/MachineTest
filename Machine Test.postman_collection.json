@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "7c1bc13e-c18d-47a3-87a8-597ba5ed333c",
+		"name": "Machine Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15776970"
+	},
+	"item": [
+		{
+			"name": "saveCred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test4\",\r\n    \"password\": \"testPass4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/saveCred",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"saveCred"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePass",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test4\",\r\n    \"password\": \"testPass44\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/updatePass",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"updatePass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/checkUser",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"checkUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveProfileDetails - save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jsonString",
+							"value": "{\n    \"username\": \"test2\",\n    \"fName\": \"tony\",\n    \"lName\": \"stank\",\n    \"age\": 41,\n    \"phone\": \"123456789\",\n    \"address\": \"Malibu, California, USA.\",\n    \"flag\": \"save\"\n}",
+							"type": "text"
+						},
+						{
+							"key": "pic",
+							"type": "file",
+							"src": "/C:/AKS/WORK/Desktop data/profile pic sample.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/saveUpdateProfDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"saveUpdateProfDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveProfileDetails - edit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "jsonString",
+							"value": "{\n    \"username\": \"test2\",\n    \"fName\": \"tony2\",\n    \"lName\": \"stank2\",\n    \"age\": 41,\n    \"phone\": \"122222\",\n    \"address\": \"Malibu, California, USA.\",\n    \"flag\": \"edit\"\n}",
+							"type": "text"
+						},
+						{
+							"key": "pic",
+							"type": "file",
+							"src": "/C:/AKS/WORK/Desktop data/profile pic sample.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/saveUpdateProfDetails",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"saveUpdateProfDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/getPic",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getPic"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
