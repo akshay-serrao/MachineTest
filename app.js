@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 global.config = require('./config.json')
-global.pool = require('./dbConnect')
+global.pool = require('./services/dbConnect')
 global.myDecrypt = require('./services/encryptDecrypt').myDecrypt
 global.myEncrypt = require('./services/encryptDecrypt').myEncrypt
 global.httpError = require('./services/httpResponseHandlers').httpError
@@ -13,14 +13,6 @@ global.dbQuery = require('./services/dbQuery')
 app.use(express.json())
 
 app.use('/ping', (req, res) => res.json('pong'))
-app.use('/test', async (req, res) => {
-	try {
-		const data = await pool.query('select * from users')
-		res.json(data)
-	} catch (e) {
-		res.status(500).send({ e })
-	}
-})
 
 const indexRouter = require('./routes/index')
 app.use('/api', indexRouter)
