@@ -3,8 +3,6 @@ const app = express()
 
 global.config = require('./config.json')
 global.pool = require('./services/dbConnect')
-global.myDecrypt = require('./services/encryptDecrypt').myDecrypt
-global.myEncrypt = require('./services/encryptDecrypt').myEncrypt
 global.httpError = require('./services/httpResponseHandlers').httpError
 global.httpFailure = require('./services/httpResponseHandlers').httpFailure
 global.httpSuccess = require('./services/httpResponseHandlers').httpSuccess
